@@ -1,0 +1,367 @@
+@import 'lib/smart-grid.styl';
+@import 'lib/fonts-lib.styl';
+@import 'lib/mixin-lib.styl';
+@import 'lib/var-lib.styl';
+
+
+@import 'lib/slick-lib.styl';
+@import 'lib/slick-theme-lib.styl';
+
+
+
+
+.debug
+    debug(rgba(0, 0, 0, 0.5), 1px solid #666)
+
+.page
+    &--theme
+        font 14px/2.14 'Roboto', sans-serif
+        min-height 100vh
+        margin 0
+        color $grayDark
+        background #fff
+        min-width 100%
+        min-height 100%
+
+
+
+.layout
+    &__topMenu
+        wrapper()
+    &__header
+        wrapper()
+    &__middleMenu
+        wrapper()
+    &__title
+        wrapper()
+    &__hitProducts
+        wrapper()
+    &__row
+        row-flex()
+    &__cell
+        col()
+
+.title
+    font-family: 'Raleway', sans-serif
+    font-weight 600
+    padding 5px 60px
+    &--main
+        text-align center
+    &__text
+        position relative
+        font-size 24px
+        &::before
+            content ""
+            position absolute
+            width 55px
+            height 2px
+            background $yellow
+            left -65px
+            top 50%
+        &::after
+            content ""
+            position absolute
+            width 55px
+            height 2px
+            background $yellow
+            right -65px
+            top 50%
+    &__xl
+        font-size 30px
+    &__md
+        font-size 24px
+
+.link
+    text-decoration none
+    color $yellow
+
+
+
+.line
+    width 100%
+    &--bdr
+        bdr(bottom, $grayLight)
+
+    &--color
+        background $yellowLight
+.header
+    padding-top 40px
+    padding-bottom 40px
+    &__inner
+        row-flex()
+    &__logo
+        col()
+        size(3)
+        size-md(6)
+        md order 0
+        text-align center
+        align-self center
+
+    &__address
+        col()
+        size(3)
+        size-md(6)
+        md order 2
+        align-self center
+        md text-align center
+    &__phone
+        col()
+        size(3)
+        size-md(6)
+        md order 3
+        align-self center
+        text-align center
+    &__miniCart
+        col()
+        size(3)
+        size-md(6)
+        md order 1
+        align-self center
+
+
+.topMenu
+    &__control
+        display none
+        md display block
+        padding-left 40px
+        background url("/img/sandwich__ico.png")        no-repeat 5px 50%
+        text-decoration none
+        color $grayDark
+        font-size  18px
+        trns($th,color)
+        &:hover
+            color $yellow
+
+    &__drop
+        md position absolute
+        background #ffffff
+        &--hidden
+            md max-height 0
+            overflow hidden
+            transition max-height $th ease-in-out
+        &--visible
+            height auto
+            max-height 400px
+            overflow hidden
+            transition max-height $th ease-in-out
+            z-index 1000
+
+    &__link
+        display inline-block
+        text-decoration none
+        padding 0 15px
+        color $grayDark
+        trns($th, background )
+        md display block
+        md background-color #fff
+        md margin-bottom 2px
+        md font-size 16px
+        md padding-left 40px
+        md padding-right 30px
+        md border-width 1px
+        md border-color $grayLight
+        md border-style solid
+        &:hover
+            background $yellowLight
+        &--first
+            position relative
+            padding-left 25px
+            md padding-left 40px
+            &::before
+                content ""
+                background url("/img/home__ico.png") no-repeat
+                width 13px
+                height 11px
+                position absolute
+                bottom 10px
+                left 5px
+                md background none
+                md position relative
+                md height 0
+                md width 0
+
+
+
+
+
+
+.logo
+    &__img
+        display block
+        margin auto
+        max-width 100%
+.address
+    md margin-top 30px
+    &__line
+        position relative
+        padding-left 30px
+        md padding-left 20px
+        sm font-size 13px
+
+        &::before
+            content ""
+            background url("/img/mapMark.png") no-repeat
+            position absolute
+            height 19px
+            width 14px
+            left 0
+
+.phone
+    md margin-top 30px
+    &__line
+        display block
+        sm font-size 13px
+        md display inline-block
+
+.miniCart
+    display flex
+    &__image
+        align-self center
+        position relative
+        width 50%
+
+        text-align right
+    &__img
+        max-width 100%
+        align-self center
+        display inline-block
+        margin auto
+
+    &__totalItem
+        align-self center
+        display block
+        position absolute
+        background $yellow
+        border-radius 30%
+        line-height 14px
+        padding 2px 7px
+        right 47px
+    &__info
+        align-self center
+        width 50%
+        text-align center
+        line-height 20px
+
+
+
+
+
+
+
+.middleMenu
+    &__control
+        display none
+        sm display block
+        padding-left 40px
+        padding-top 5px
+        padding-bottom 5px
+        background $yellow url("/img/sandwich__ico.png")        no-repeat 5px 50%
+        text-decoration none
+        color $grayDark
+        font-size  18px
+        trns($th,background-color)
+        &:hover
+            background-color $yellowLight
+    &__drop
+        background $yellow
+        sm background #fff
+        sm position absolute
+        &--hidden
+            sm max-height 0
+            overflow hidden
+            transition max-height $th ease-in-out
+        &--visible
+            height auto
+            max-height 400px
+            overflow hidden
+            transition max-height $th ease-in-out
+            z-index 1000
+
+    &__link
+        display inline-block
+        text-decoration none
+        padding 5px 55px
+        md padding-left 50px
+        md padding-right 50px
+        color $grayDark
+        trns($th, background )
+        font-size 16px
+        bdr(right, $yellowLight, 2px)
+        sm display block
+        sm background-color $yellowLight
+        sm margin-bottom 2px
+        sm font-size 16px
+        sm padding-left 40px
+        sm padding-right 50px
+        &--first
+            sm margin-top 2px
+        &:hover
+            background $yellowLight
+
+
+
+.hitProducts
+    &__inner
+        width 100%
+        background url($pattern)
+
+.item
+    text-align center
+    padding-bottom 10px
+    &__title
+        font-size 16px
+        text-transform uppercase
+
+
+    &__link
+        color $grayDark
+
+    &__price
+        background #fff
+        padding 2px 10px
+        display inline-block
+        font-size 14px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
