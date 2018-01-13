@@ -9,7 +9,6 @@
 
 
 
-
 .debug
     debug(rgba(0, 0, 0, 0.5), 1px solid #666)
 
@@ -36,12 +35,21 @@
         wrapper()
     &__hitProducts
         wrapper()
+    &__main
+        wrapper()
+    &__footer
+        wrapper()
     &__row
         row-flex()
     &__cell
         col()
 
 .title
+    sm text-align center
+
+
+
+.titleLine
     font-family: 'Raleway', sans-serif
     font-weight 600
     padding 5px 60px
@@ -50,6 +58,9 @@
     &__text
         position relative
         font-size 24px
+        sm font-size 20px
+        sm display block
+        sm text-align center
         &::before
             content ""
             position absolute
@@ -82,8 +93,12 @@
     &--bdr
         bdr(bottom, $grayLight)
 
-    &--color
-        background $yellowLight
+    &--bg
+        &Yellow
+            background $yellowLight
+        &Gray
+            background $grayDark
+
 .header
     padding-top 40px
     padding-bottom 40px
@@ -212,6 +227,8 @@
         display block
         sm font-size 13px
         md display inline-block
+        &--footer
+            text-decoration underline
 
 .miniCart
     display flex
@@ -301,40 +318,103 @@
 
 
 .hitProducts
+    &__title
+        padding-top 20px
+        padding-bottom 10px
     &__inner
         width 100%
         background url($pattern)
+        position relative
+
+.slick-track
+    display flex
+    align-items stretch
 
 .item
     text-align center
     padding-bottom 10px
+    display flex
+    flex-direction column
+
     &__title
         font-size 16px
         text-transform uppercase
-
+        padding-top 10px
+        padding-bottom 10px
+        md font-size 14px
+        flex-grow 1
 
     &__link
         color $grayDark
-
+    &__img
+        max-width 100%
     &__price
         background #fff
         padding 2px 10px
         display inline-block
         font-size 14px
+        align-self center
 
 
 
 
+.main
+    &__title
+        padding-top 30px
+        padding-bottom 0px
+        display block
+.footer
+    color #fff
+    &__item
+        size(3)
+        size-md(6)
+        size-sm(12)
+        sm text-align center
+        padding-bottom 20px
+    &__title
+        font-size 18px
+        bdr(bottom, #fff, 2px)
+        margin-bottom 20px
 
 
+    &__menuItem
+        display block
+        color #fff
+        trns($th,color)
+        &:hover
+            color $yellow
+
+    &__schedule
+        width 100%
+    &__logo
+        padding-top 20px
+        display block
+        margin auto
+
+    &__phone
+        display block
+        text-align center
+        margin 30px auto
+    &__mail
+        display block
+        text-align center
+        margin 30px auto
 
 
+.schedule
+    &__day
+        padding-right 5px
+        width 50%
+    &__time
+        color $yellow
+        text-align right
+        width 50%
 
 
-
-
-
-
+.mail
+    &__line
+        font-size 16px
+        color #fff
 
 
 
