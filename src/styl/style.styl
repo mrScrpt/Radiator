@@ -457,13 +457,19 @@
     size-md(12)
     position relative
     md display flex
+    md flex-wrap wrap
 
     &__box
+        box-sizing border-box
         md width 40%
         md margin-right 10%
-        bdrOne($blueLight, 4px)
-        //md border none
         md background url($pattern)
+        xs width 100%
+        xs margin-right 0
+        xs margin-bottom 10px
+        bdrOne($blueLight, 4px)
+
+
 
 
     &__control
@@ -474,18 +480,12 @@
         padding 5px 0
 
     &__drop
+        z-index 1000
+        box-sizing border-box
         md background #fff
         md position absolute
         md width 40%
         md margin-right 10%
-
-        md border-color $blueLight
-        md border-width 1px
-        md border-style solid
-        md border-radius 4px
-        md box-sizing border-box
-
-        z-index 1000
         &--hidden
             md max-height 0
             overflow hidden
@@ -495,6 +495,12 @@
             max-height 400px
             overflow hidden
             transition max-height $th ease-in-out
+            md border-color $blueLight
+            md border-width 1px
+            md border-style solid
+            md border-radius 4px
+
+
 
 
 .category
