@@ -1,6 +1,8 @@
 //Бордеры
-bdrOne(color)
+bdrOne(color, border-radius=0)
   border 1px solid color
+  if border-radius
+     border-radius border-radius
 
 bdr(side,color,size=1px)
   border-{side}: size solid color
