@@ -1,0 +1,132 @@
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.checkbox {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px;
+}
+
+
+
+
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.checkbox {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px;
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.checkbox + label {
+    cursor: pointer;
+}
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */
+.checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+.checkbox:not(checked) + label {
+    position: relative; /* будем позиционировать псевдочекбокс относительно label */
+    padding: 0 0 0 35px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    bdrOne($blueLight)
+    background: $fff;
+}
+
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.checkbox:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: -2px
+    left: 2px
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    bdrOne(transparent)
+    background-coclor: #fff;
+    background-image none
+    background-position 50% 50%
+
+    transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+}
+///* Меняем фон чекбокса, когда он включен. */
+.checkbox:checked + label:before {
+//    background: $yellow;
+}
+///* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkbox:checked + label:after {
+    background: $yellow url("/img/checkbox__bg.png") no-repeat 50% 50%;
+}
+///* Показываем получение фокуса. */
+//.checkbox:focus + label:before {
+//    box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+//}
+
+
+
+//Селекты
+
+.select
+    bdrAll($grayLight, 1px)
+    border-radius 4px
+    background: linear-gradient(to bottom, #fefefe, #f2f4f7);
+    font-size 14px
+    padding 5px 10px
+
+.button
+    cursor pointer
+    border none
+    text-transform uppercase
+    font-size 16px
+    position relative
+    outline none
+    border-radius 4px
+    //background-color $grayLight
+
+    &__icon
+        position relative
+        width 28px
+        line-height 20px
+        display: inline-block;
+        text-align: center;
+        background: 50% no-repeat;
+        background-image url("/img/button__img--cart.png")
+        &::after
+            visibility: hidden;
+            content: '\00A0';
+
+
+    &__text
+        line-height 20px
+        position relative
+        display inline-block
+
+    &::before
+        position absolute
+        top: 1px
+        right: 1px
+        bottom: 1px
+        left: 1px
+        content: ''
+        border-radius: 4px
+        background: $yellow
+        trns($th, background )
+    &:hover::before
+            background $yellowGradientDark

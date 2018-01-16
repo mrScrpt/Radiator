@@ -2,8 +2,9 @@
 @import 'lib/fonts-lib.styl';
 @import 'lib/mixin-lib.styl';
 @import 'lib/var-lib.styl';
-@import 'lib/fancybox-lib.styl';
 
+@import 'lib/fancybox-lib.styl';
+@import 'lib/standart-lib.styl';
 @import 'lib/slick-lib.styl';
 @import 'lib/slick-theme-lib.styl';
 
@@ -473,24 +474,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .category
     size(9)
     size-md(12)
-    background yellow
     &__title
         text-align center
 
@@ -546,87 +532,6 @@
 
 
 
-/* Cначала обозначаем стили для IE8 и более старых версий
-т.е. здесь мы немного облагораживаем стандартный чекбокс. */
-.checkbox {
-    vertical-align: top;
-    margin: 0 3px 0 0;
-    width: 17px;
-    height: 17px;
-}
-
-
-
-
-/* Cначала обозначаем стили для IE8 и более старых версий
-т.е. здесь мы немного облагораживаем стандартный чекбокс. */
-.checkbox {
-    vertical-align: top;
-    margin: 0 3px 0 0;
-    width: 17px;
-    height: 17px;
-}
-/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
-селекторы с плюсом. Показываем, что label кликабелен. */
-.checkbox + label {
-    cursor: pointer;
-}
-
-/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
-Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
-в них все нижеследующие стили не сработают. */
-
-/* Прячем оригинальный чекбокс. */
-.checkbox:not(checked) {
-    position: absolute;
-    opacity: 0;
-}
-.checkbox:not(checked) + label {
-    position: relative; /* будем позиционировать псевдочекбокс относительно label */
-    padding: 0 0 0 35px; /* оставляем слева от label место под псевдочекбокс */
-}
-/* Оформление первой части чекбокса в выключенном состоянии (фон). */
-.checkbox:not(checked) + label:before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: 0;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    bdrOne($blueLight)
-    background: $fff;
-}
-
-/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
-.checkbox:not(checked) + label:after {
-    content: '';
-    position: absolute;
-    top: -2px
-    left: 2px
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    bdrOne(transparent)
-    background-coclor: #fff;
-    background-image none
-    background-position 50% 50%
-
-    transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
-}
-///* Меняем фон чекбокса, когда он включен. */
-.checkbox:checked + label:before {
-//    background: $yellow;
-}
-///* Сдвигаем переключатель чекбокса, когда он включен. */
-.checkbox:checked + label:after {
-    background: $yellow url("/img/checkbox__bg.png") no-repeat 50% 50%;
-}
-///* Показываем получение фокуса. */
-//.checkbox:focus + label:before {
-//    box-shadow: 0 0 0 3px rgba(255,255,0,.5);
-//}
-
 
 
 
@@ -668,10 +573,11 @@
 
 
 .dignity
+    padding 20px 0
     &__inner
         display flex
         flex-wrap wrap
-        justify-content space-around
+        justify-content center
 
     &__item
         width 16%
@@ -689,22 +595,59 @@
         sm font-size 13px
 
 
+.sorting
+    padding 20px 0
+    &__inner
+        row-flex()
+    &__item
+        col()
+        size(4)
+
+    &__label
+        display block
+        color $grayLight
 
 
 
 
 
+.list
+    row-flex()
+    &__position
+        margin-bottom 20px
 
+.position
+    size(4)
+    size-xs(6)
+    size-xls(6)
+    bdrOne($grayLight)
+    border-radius 4px
+    box-shadow: 0px 2px 5px 0px rgba($grayLight, 0.75)
 
-
-
-
-
-
-
-
-
-
+    &__img
+        max-width calc(100% - 3px)
+        display block
+        margin auto
+        padding 3px
+        box-sizing border-box
+    &__title
+        text-transform uppercase
+        text-align center
+        padding 10px 0
+    &__box
+        display flex
+        flex-wrap wrap
+        padding 10px 5px 20px
+    &__price
+        font-size 20px
+        width 50%
+        sm width 100%
+        text-align center
+    &__button
+        width 50%
+        sm width 100%
+        line-height 40px
+        text-align center
 
 
 

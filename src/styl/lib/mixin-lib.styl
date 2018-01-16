@@ -1,12 +1,14 @@
 //Бордеры
 bdrOne(color, border-radius=0)
-  border 1px solid color
-  if border-radius
-     border-radius border-radius
+    border 1px solid color
+    if border-radius
+        border-radius border-radius
 
 bdr(side,color,size=1px)
-  border-{side}: size solid color
+    border-{side}: size solid color
 
+bdrAll(color,size=1px)
+    border size solid color
 // тени
 ts(opaciti, color=$gray)
   text-shadow: 1px 1px 0px rgba(color,  opaciti);
