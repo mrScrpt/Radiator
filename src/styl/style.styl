@@ -472,37 +472,17 @@
 
 
 
-    &__control
-        display block
-        md display block
-        text-align center
-        font-size 16px
-        padding 5px 0
-        bdr(bottom, $blueLight)
 
 
 
 
-    &__drop
-        z-index 1000
-        box-sizing border-box
-        md background #fff
-        md position absolute
-        md width 40%
-        md margin-right 10%
-        &--hidden
-            md max-height 0
-            overflow hidden
-            transition max-height $th ease-in-out
-        &--visible
-            height auto
-            max-height 400px
-            overflow hidden
-            transition max-height $th ease-in-out
-            md border-color $blueLight
-            md border-width 1px
-            md border-style solid
-            md border-radius 4px
+
+
+
+
+
+
+
 
 
 
@@ -516,6 +496,37 @@
 
 
 .filter
+    &__control
+        display block
+        md display block
+        text-align center
+        font-size 16px
+        padding 5px 0
+        bdr(bottom, $blueLight)
+    &__drop
+        z-index 1000
+        box-sizing border-box
+        md background #fff
+        md position absolute
+        md width 40%
+        md margin-right 10%
+        xs width 100%
+        xs margin-right 0
+        &--hidden
+            md max-height 0
+            overflow hidden
+            transition max-height $th ease-in-out
+        &--visible
+            height auto
+            max-height 400px
+            overflow hidden
+            transition max-height $th ease-in-out
+            border-width 1px
+            border-style solid
+            border-radius 4px
+            border-color transparent
+            md border-color $blueLight
+
     &__block
         display block
         margin 10px
@@ -622,3 +633,95 @@
 .certificates
     &__img
         max-width 100%
+    &__control
+        display block
+        md display block
+        text-align center
+        font-size 16px
+        padding 5px 0
+        bdr(bottom, $blueLight)
+    &__drop
+        z-index 1000
+        box-sizing border-box
+        md background #fff
+        md position absolute
+        md width 40%
+        md margin-right 10%
+        xs width 100%
+        xs margin-right 0
+        &--hidden
+            md max-height 0
+            overflow hidden
+            transition max-height $th ease-in-out
+        &--visible
+            height auto
+            max-height 1100px
+            overflow hidden
+            transition max-height $th ease-in-out
+            border-width 1px
+            border-style solid
+            border-radius 4px
+            border-color transparent
+            md border-color $blueLight
+
+
+
+
+.dignity
+    &__inner
+        display flex
+        flex-wrap wrap
+        justify-content space-around
+
+    &__item
+        width 16%
+        sm width 15%
+        sm width 30%
+        sm padding-top 10px
+        sm padding-bottom 10px
+    &__img
+        display block
+        max-width 100%
+        margin auto
+    &__title
+        text-align center
+        line-height 20px
+        sm font-size 13px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

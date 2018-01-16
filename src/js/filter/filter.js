@@ -1,6 +1,7 @@
 $(function() {
-        $(".sidebar__control").on("click", function(event) {
+        $(".filter__control").on("click", function(event) {
             event.preventDefault();
-            $(".filter").toggleClass("sidebar__drop--hidden sidebar__drop--visible");
+            $(".filter__drop").toggleClass("filter__drop--hidden filter__drop--visible");
         })
 });
+
