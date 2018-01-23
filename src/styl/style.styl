@@ -651,10 +651,38 @@
 
 
 
+.pagination
+    &__inner
+        margin 0
+        padding 0
+        text-align center
+    &__item
+        display inline-block
+        list-style none
+        bdrOne($gray)
+        border-right none
+        &:first-child
+            border-radius 3px 0 0 3px
+            border-right none
+        &:last-child
+            border-radius 0 3px 3px 0
+            bdrOne($gray)
 
+    &__link
+        color $gray
+        display block
+        padding 0 10px
+        trns($th, background)
+        &:hover
+            background $yellow
 
-
-
+    &__active
+        color $gray
+        display block
+        padding 0 10px
+        trns($th, background)
+        &:hover
+            background $yellow
 
 
 
