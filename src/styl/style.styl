@@ -52,7 +52,8 @@
 .title
     font-family: 'Raleway', sans-serif
     sm text-align center
-
+    margin 0
+    padding 0
 
 
 .titleLine
@@ -369,10 +370,15 @@
 .main
     padding-bottom 100px
     sm padding-bottom 30px
+
+
+
+.article
     &__title
         padding-top 30px
         padding-bottom 0px
         display block
+
 .footer
     color #fff
     &__item
@@ -616,7 +622,7 @@
     &__position
         margin-bottom 20px
 
-.position
+.snippet
     size(4)
     size-xs(6)
     size-xls(6)
@@ -654,7 +660,7 @@
 .pagination
     &__inner
         margin 0
-        padding 0
+        padding 30px 0
         text-align center
     &__item
         display inline-block
@@ -688,11 +694,41 @@
 
 
 
+.product
+    &__inner
+
+        row-flex()
+    &__gallery
+        size(6)
+    &__title
+        font-size 30px
+    &__article
+        text-transform uppercase
+        margin-bottom 30px
+    &__price
+        font-size 24px
+
+
+.gallery
+    col()
+    &__img
+        width 100%
 
 
 
+    &__thumbItem
+        display inline-block
+        width 24%
+        padding-left 15px
+        padding-right 15px
+        box-sizing border-box
+
+    &__thumbsImg
+        max-width 100%
 
 
 
-
-
+.offer
+    &__button
+        padding 10px 15px
+        margin 10px 0 20px 0
