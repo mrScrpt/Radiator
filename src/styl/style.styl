@@ -49,6 +49,12 @@
     &__cell
         col()
 
+
+
+
+
+
+
 .title
     font-family: 'Raleway', sans-serif
     sm text-align center
@@ -619,7 +625,7 @@
 
 .list
     row-flex()
-    &__position
+    &__snippet
         margin-bottom 20px
 
 .snippet
@@ -696,17 +702,24 @@
 
 .product
     &__inner
-
         row-flex()
     &__gallery
         size(6)
+        size-xs(12)
+    &__offer
+        size(6)
+        size-xs(12)
     &__title
         font-size 30px
+        sm text-align left
+        xs text-align center
     &__article
         text-transform uppercase
         margin-bottom 30px
+        xs text-align center
     &__price
         font-size 24px
+        xs text-align center
 
 
 .gallery
@@ -729,6 +742,15 @@
 
 
 .offer
+    col()
+    xs text-align center
     &__button
         padding 10px 15px
         margin 10px 0 20px 0
+
+
+.callback
+    &__input
+        width 50%
+        md width 100%
+        display block
