@@ -40,6 +40,7 @@
         wrapper()
     &__footer
         wrapper()
+        margin-top 100px
     &__breadcrumbs
         wrapper()
     &__content
@@ -65,7 +66,7 @@
 .titleLine
     font-family: 'Raleway', sans-serif
     font-weight 600
-    padding 5px 60px
+    padding 5px 65px
     &--main
         text-align center
     &__text
@@ -374,7 +375,6 @@
 
 
 .main
-    padding-bottom 100px
     sm padding-bottom 30px
 
 
@@ -704,9 +704,11 @@
     &__inner
         row-flex()
     &__gallery
+        col()
         size(6)
         size-xs(12)
     &__offer
+        col()
         size(6)
         size-xs(12)
     &__title
@@ -720,10 +722,14 @@
     &__price
         font-size 24px
         xs text-align center
+    &__description
+        col()
+    &__spec
+        col()
+        width 100%
 
 
 .gallery
-    col()
     &__img
         width 100%
 
@@ -742,7 +748,6 @@
 
 
 .offer
-    col()
     xs text-align center
     &__button
         padding 10px 15px
@@ -754,3 +759,28 @@
         width 50%
         md width 100%
         display block
+
+
+
+.spec
+    width 100%
+    margin 0
+    padding 0
+    border-collapse collapse
+    border-spacing 0
+    &__row
+        cursor pointer
+        &:hover
+            background $yellowLight
+    &__name
+        bdrOne($grayLight)
+        width 70%
+        padding 15px 5px 15px 35px
+        xs width 60%
+        xs padding-left 5px
+    &__value
+        bdrOne($grayLight)
+        width 30%
+        padding 15px 5px 15px 35px
+        xs width 40%
+        xs padding-left 5px
