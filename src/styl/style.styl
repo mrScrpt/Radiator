@@ -1,3 +1,8 @@
+
+
+
+
+
 @import 'lib/smart-grid.styl';
 @import 'lib/fonts-lib.styl';
 @import 'lib/mixin-lib.styl';
@@ -769,8 +774,12 @@
 .offer
     xs text-align center
     &__button
-        padding 10px 15px
+        //padding 10px 15px
         margin 10px 0 20px 0
+        font-size 16px
+        height 38px
+        line-height 38px
+        border-radius 4px
 
 
 .callback
@@ -778,6 +787,10 @@
         width 50%
         md width 100%
         display block
+    &__control
+        font-size 16px
+        height 38px
+        line-height 38px
 
 
 
@@ -809,13 +822,73 @@
     &__item
         col()
         align-self center
-        &--number
-            size(1)
-        &--img
-            size(3)
-        &--content
-            size(4)
-        &--count
-            size(3)
-        &--del
-            size(1)
+        &--type
+            &--number
+                size(1)
+            &--img
+                size(3)
+                padding 0
+                box-sizing border-box
+            &--content
+                size(5)
+            &--count
+                size(2)
+            &--del
+                size(1)
+                align-self flex-start
+                background pink
+    &__img
+        box-sizing border-box
+        max-width 100%
+        height auto
+        display block
+        margin 0
+        padding 15px
+
+    &__itemName
+        font-size 30px
+        line-height 32px
+    &__itemPrice
+        font-size 24px
+
+    &__delete
+        background red
+        position relative
+.amountSelect
+    display inline-block
+    &__button
+        margin 0
+        padding 0
+        font-size 16px
+        height 38px
+        line-height 38px
+        width 28px
+
+    &__input
+        margin 0
+        padding  0
+        font-size 16px
+        height 38px
+        line-height 38px
+        width 52px
+        border-radius none
+
+
+
+    &__control
+        height 38px
+        line-height 38px
+        text-align center
+
+
+
+.imageDelete
+    background url("/img/delete__ico.png") no-repeat 0 0
+    height 21px
+    width 21px
+    display block
+    position absolute
+    right 0px
+    top 10px
+
+
