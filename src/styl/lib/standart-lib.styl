@@ -105,9 +105,9 @@
         position relative
         width 28px
         line-height 20px
-        display: inline-block;
-        text-align: center;
-        background: 50% no-repeat;
+        display inline-block
+        text-align center
+        background 50% no-repeat
         background-image url("/img/button__img--cart.png")
         &::after
             visibility: hidden;
@@ -115,9 +115,9 @@
 
 
     &__text
-        line-height 20px
         position relative
         display inline-block
+        line-height 20px
 
     &::before
         position absolute
@@ -151,7 +151,7 @@
     width 100%
     margin-left 1px
     &__box
-        padding-right 30px
+        //padding-right 30px
         display block
         cursor text
         position relative
@@ -169,13 +169,16 @@
             left 0
             padding 0
             content ''
-            background-clip padding-box
+
+
         &--focus
             &:before
                 border-color $yellow
                 border-width 2px
 
+
     &__control
+
         z-index 3
         width 100%
         margin 0
@@ -195,3 +198,5 @@
         border-left-width 10px
         font-family inherit
         line-height 38px
+        &--center
+            text-align center

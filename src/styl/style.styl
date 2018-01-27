@@ -10,6 +10,69 @@
 
 
 
+
+
+
+
+
+.img
+    font 0/0 a
+    border 0
+
+.link
+    text-decoration none
+    color $yellow
+
+.table
+    width 100%
+    margin 0
+    padding 0
+    border-collapse collapse
+    border-spacing 0
+
+
+
+.title
+    font-family: 'Raleway', sans-serif
+    sm text-align center
+    margin 0
+    padding 0
+
+
+.titleLine
+    font-family: 'Raleway', sans-serif
+    font-weight 600
+    padding 5px 65px
+    &--main
+        text-align center
+    &__text
+        position relative
+        font-size 24px
+        sm font-size 20px
+        sm display block
+        sm text-align center
+        &::before
+            content ""
+            position absolute
+            width 55px
+            height 2px
+            background $yellow
+            left -65px
+            top 50%
+        &::after
+            content ""
+            position absolute
+            width 55px
+            height 2px
+            background $yellow
+            right -65px
+            top 50%
+    &__xl
+        font-size 30px
+    &__md
+        font-size 24px
+
+
 .debug
     debug(rgba(0, 0, 0, 0.5), 1px solid #666)
 
@@ -55,50 +118,6 @@
 
 
 
-
-.title
-    font-family: 'Raleway', sans-serif
-    sm text-align center
-    margin 0
-    padding 0
-
-
-.titleLine
-    font-family: 'Raleway', sans-serif
-    font-weight 600
-    padding 5px 65px
-    &--main
-        text-align center
-    &__text
-        position relative
-        font-size 24px
-        sm font-size 20px
-        sm display block
-        sm text-align center
-        &::before
-            content ""
-            position absolute
-            width 55px
-            height 2px
-            background $yellow
-            left -65px
-            top 50%
-        &::after
-            content ""
-            position absolute
-            width 55px
-            height 2px
-            background $yellow
-            right -65px
-            top 50%
-    &__xl
-        font-size 30px
-    &__md
-        font-size 24px
-
-.link
-    text-decoration none
-    color $yellow
 
 
 
@@ -763,11 +782,6 @@
 
 
 .spec
-    width 100%
-    margin 0
-    padding 0
-    border-collapse collapse
-    border-spacing 0
     &__row
         cursor pointer
         &:hover
@@ -784,3 +798,24 @@
         padding 15px 5px 15px 35px
         xs width 40%
         xs padding-left 5px
+
+
+
+.checkoutOffer
+    row-flex()
+    col()
+    size(12)
+    bdrOne($grayLight,4px)
+    &__item
+        col()
+        align-self center
+        &--number
+            size(1)
+        &--img
+            size(3)
+        &--content
+            size(4)
+        &--count
+            size(3)
+        &--del
+            size(1)
