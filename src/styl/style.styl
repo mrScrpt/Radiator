@@ -39,9 +39,9 @@
 
 .title
     font-family: 'Raleway', sans-serif
-    sm text-align center
     margin 0
     padding 0
+
 
 
 .titleLine
@@ -812,7 +812,8 @@
         xs width 40%
         xs padding-left 5px
 
-
+.checkoutOffers
+    margin-bottom 50px
 
 .checkoutOffer
     row-flex()
@@ -822,21 +823,62 @@
     &__item
         col()
         align-self center
+        xs text-align center
+        xs padding-bottom 20px
         &--type
             &--number
                 size(1)
+                sm display none
+                size-sm(0)
+                size-xs(6)
+                xs order 0
+                xs display block
+
+                xs height 21px
+                xs line-height 21px
+                xs padding-top 10px
+                xs text-align left
+
+
             &--img
                 size(3)
+                size-sm(2)
+                size-xs(12)
+                xs order 2
                 padding 0
                 box-sizing border-box
+
             &--content
                 size(5)
+                size-sm(6)
+                size-xs(12)
+                xs order 3
             &--count
                 size(2)
+                size-sm(3)
+                size-xs(12)
+                xs order 4
+
             &--del
                 size(1)
+                size-sm(1)
+                size-xs(6)
                 align-self flex-start
-                background pink
+                xs order 0
+                xs padding-top 10px
+                xs align-self center
+
+
+
+    &__number
+        background $yellow
+        bdrOne($yellow,50%)
+        width 24px
+        height 24px
+        line-height 24px
+        display inline-block
+
+        text-align center
     &__img
         box-sizing border-box
         max-width 100%
@@ -844,16 +886,23 @@
         display block
         margin 0
         padding 15px
+        md padding 0
+        xs margin auto
 
     &__itemName
         font-size 30px
+        md font-size 24px
+        sm font-size 22px
         line-height 32px
+        font-weight 600
     &__itemPrice
         font-size 24px
+        md font-size 20px
+        sm font-size 18px
 
     &__delete
-        background red
         position relative
+
 .amountSelect
     display inline-block
     &__button
@@ -863,6 +912,7 @@
         height 38px
         line-height 38px
         width 28px
+        md width 20px
 
     &__input
         margin 0
@@ -871,7 +921,9 @@
         height 38px
         line-height 38px
         width 52px
+        md width 42px
         border-radius none
+
 
 
 
@@ -890,5 +942,35 @@
     position absolute
     right 0px
     top 10px
+    xs top 0
 
+
+
+
+
+.checkoutOrder
+    display block
+    &__inner
+        row-flex()
+        justify-content flex-end
+        sm justify-content center
+        //width 100%
+
+    &__orderForm
+        col()
+        size(3)
+        size-md(4)
+        size-sm(6)
+
+    &__input
+        width 100%
+
+    &__fullPrice
+        display block
+        text-align right
+        font-size 24px
+
+    &__button
+        width 100%
+        padding 15px 0
 

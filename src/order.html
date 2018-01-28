@@ -125,7 +125,7 @@
             </div>
             <div class="checkoutOffer__item checkoutOffer__item--type--content">
                 <div class="checkoutOffer__itemTitle">
-                    <div class="checkoutOffer__itemName">Радиатор алюминевый RD-320/30</div>
+                    <div class="title checkoutOffer__itemName">Радиатор алюминевый RD-320/30</div>
                     <div class="checkoutOffer__itemPrice">ЦЕНА: 2143 грн</div>
                 </div>
             </div>
@@ -133,7 +133,9 @@
                 <div class="checkoutOffer__quantity">
                     <div class="amountSelect">
                         <button class="button button--white button--transparent amountSelect__button" role="button" type="submit">
-                            <span class="button__text">+</span>
+                            <span class="button__text">
+                                -
+                            </span>
                         </button>
                         <span class="input amountSelect__input">
                             <span class="input__box">
@@ -142,7 +144,7 @@
                         </span>
                         <button class="button button--white button--transparent amountSelect__button" role="button" type="submit">
                             <span class="button__text">
-                               -
+                              +
                             </span>
                         </button>
                     </div>
@@ -155,7 +157,59 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="checkoutOrder">
+        <div class="checkoutOrder__inner">
+            <form action=""></form>
+            <div class="orderForm checkoutOrder__orderForm">
+            <!--Поле-->
+                <span class="input checkoutOrder__input">
+                    <label class="input__label">Ваше имя</label>
+                    <span class="input__box">
+                        <input class="input__control callback__control" placeholder="Ф.И.О">
+                    </span>
+                </span>
+            <!--Поле конец-->
 
+
+
+            <!--Поле-->
+                <span class="input checkoutOrder__input">
+                    <label class="input__label">Ваш номер телефона</label>
+                    <span class="input__box">
+                        <input class="input__control callback__control" placeholder="+380">
+                    </span>
+                </span>
+            <!--Поле конец-->
+
+
+            <!--Поле-->
+                <span class="input checkoutOrder__input">
+                    <label class="input__label">Ваш E-mail</label>
+                    <span class="input__box">
+                        <input class="input__control callback__control" placeholder="E-mail">
+                    </span>
+                </span>
+            <!--Поле конец-->
+
+
+            <!--Полная цена-->
+            <span class="price checkoutOrder__fullPrice">
+                ИТОГО: 2345 грн.
+            </span>
+            <!--Полная цена конец-->
+
+
+            <!--Кнопка-->
+                <button class="button checkoutOrder__button" role="button" type="submit">
+                    <span class="button__text">
+                                   Оформить заказ
+                    </span>
+                </button>
+            <!--Кнопка КОНЕЦ-->
+
+            </div>
         </div>
     </div>
 
