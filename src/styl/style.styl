@@ -37,6 +37,10 @@
 
 
 
+.article
+    &__paragraph
+        padding 0
+        margin 0
 .title
     font-family: 'Raleway', sans-serif
     margin 0
@@ -359,7 +363,6 @@
 
 .hitProducts
     &__title
-        padding-top 20px
         padding-bottom 10px
     &__inner
         width 100%
@@ -954,16 +957,17 @@
         row-flex()
         justify-content flex-end
         sm justify-content center
-        //width 100%
 
-    &__orderForm
+    &__formOrder
         col()
         size(3)
         size-md(4)
         size-sm(6)
+        background blue
 
     &__input
         width 100%
+        background red
 
     &__fullPrice
         display block
@@ -974,3 +978,87 @@
         width 100%
         padding 15px 0
 
+
+
+
+
+
+.comments
+    &__total
+        font-size 24px
+    &__more
+        margin 50px 0
+    &__buttonMore
+        text-align center
+
+
+
+.comment
+    &__box
+        background url($pattern)
+        padding 40px 0
+        row-flex()
+        margin 15px 0
+        sm margin-bottom 50px
+
+    &__user
+        col()
+        size(2)
+        size-xs(12)
+    &__snippet
+        col()
+        size(10)
+        size-xs(12)
+    &__date
+        text-align right
+
+
+.user
+    &__avatar
+        text-align center
+    &__name
+        text-transform uppercase
+        text-align center
+        background white
+
+
+
+.formComment
+    &__commentator
+        col()
+        size(4)
+        size-sm(12)
+    &__input
+        width 80%
+        display block
+        margin-bottom 20px
+    &__area
+        width 100%
+
+    &__controlArea
+        line-height 24px
+
+
+    &__sum
+        width 300px
+
+    &__label
+        font-weight bold
+    &__control
+        line-height 34px
+
+    &__message
+        col()
+        size(8)
+        size-sm(12)
+        padding-bottom 20px
+    &__submitBox
+        col()
+        size-sm(12)
+        text-align right
+        md text-align center
+        display block
+        width 100%
+    &__submit
+        font-size 16px
+        padding 15px 35px
