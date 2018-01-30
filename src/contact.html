@@ -116,113 +116,98 @@
     </ul>
 </div>
 
-<!--Оформление заказа-->
-<main class="main layout__main order">
-    <div class="titleLine hitProducts__title">
-        <span class="titleLine__text">Заголовок первого уровня</span>
-    </div>
-    <div class="checkoutOffers layout__row">
-        <div class="checkoutOffer">
-            <div class="checkoutOffer__item checkoutOffer__item--type--number">
-                <span class="checkoutOffer__number">1</span>
-            </div>
-            <div class="checkoutOffer__item checkoutOffer__item--type--img">
-                <img src="/img/test/item__img-1.jpg" alt="" class="img checkoutOffer__img">
-            </div>
-            <div class="checkoutOffer__item checkoutOffer__item--type--content">
-                <div class="checkoutOffer__itemTitle">
-                    <div class="title checkoutOffer__itemName">Радиатор алюминевый RD-320/30</div>
-                    <div class="checkoutOffer__itemPrice">ЦЕНА: 2143 грн</div>
-                </div>
-            </div>
-            <div class="checkoutOffer__item checkoutOffer__item--type--count">
-                <div class="checkoutOffer__quantity">
-                    <div class="amountSelect">
-                        <button class="button button--white button--transparent amountSelect__button" role="button" type="submit">
-                            <span class="button__text">
-                                -
-                            </span>
-                        </button>
-                        <span class="input amountSelect__input">
-                            <span class="input__box">
-                                <input class="input__control amountSelect__control" placeholder="">
-                            </span>
-                        </span>
-                        <button class="button button--white button--transparent amountSelect__button" role="button" type="submit">
-                            <span class="button__text">
-                              +
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="checkoutOffer__item checkoutOffer__item--type--del">
-                <div class="checkoutOffer__delete">
-                    <a href="#" class="image imageDelete">
+<!--Комментарии-->
+<main class="main layout__main">
+    <!--Контейнер для комментов-->
+    <div class="contacts">
 
-                    </a>
+        <div class="titleLine">
+            <span class="titleLine__text">Отзывы о магазине</span>
+        </div>
+    <div class="contact layout__row">
+
+
+        <div class="contacts__box contact__phone">
+            <div class="title contact__title">Контактные номера телефонов</div>
+            <!--Телефоны-->
+            <div class="phone">
+                <span class="phone__line">
+                    <span class="phone__provider">Vodafone</span>
+                    <span class="phone__number">+3 8 (097) 285-81-14</span>
+                </span>
+                <span class="phone__line">
+                    <span class="phone__provider">Kyivstar</span>
+                    <span class="phone__number">+3 8 (097) 483-11-23</span>
+                </span>
+
+                <span class="phone__line">
+                    <span class="phone__provider">Viber</span>
+                    <span class="phone__number">+3 8 (097) 483-11-23</span>
+                </span>
+
+                <span class="phone__line">
+                    <span class="phone__provider">WhatsApp</span>
+                    <span class="phone__number">+3 8 (097) 483-11-23</span>
+                </span>
+
+            </div>
+            <!--Телефоны КОНЕЦ-->
+        </div>
+
+        <div class="contacts__box contact__mail">
+            <div class="title contact__title">Почта для клиентов</div>
+            <div class="mail">
+                <div class="mail__line"></div>
+                <a href="mailto:clients@site.com.ua" class="mail__link">clients@site.com.ua</a>
+            </div>
+        </div>
+
+        <div class="contacts__box contact__schedule">
+            <div class="title contact__title">Режим работы</div>
+            <div class="schedule">
+                <div class="schedule__row">
+                    <dt class="schedule__name">Заказ через корзину сайта</dt>
+                    <dd class="schedule__value">Круглосуточно</dd>
                 </div>
+                <div class="schedule__row">
+                    <dt class="schedule__name">Заках по телефону</dt>
+                    <dd class="schedule__value">с 8:00 до 20:00</dd>
+                </div>
+                <div class="schedule__row">
+                    <dt class="schedule__name">Выходные</dt>
+                    <dd class="schedule__value">Воскресенье</dd>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="contacts__box contact__social">
+            <div class="title contact__title">Мы в соц</div>
+            <div class="social">
+                <span class="social__line">
+                    <span class="social__provider">Вконтакте:</span>
+                    <a class="social__providerLink" href="#">Интернет-магазин Радиатор</a>
+                </span>
+                <span class="social__line">
+                    <span class="social__provider">Инстаграм:</span>
+                    <a class="social__providerLink" href="#">Интернет-магазин Радиатор</a>
+                </span>
+            </div>
+
+        </div>
+        <div class="contacts__box contact__address">
+            <div class="title contact__title">Наш адрес</div>
+            <div class="address">
+                <div class="address__line">Украина, г.Харьков, пр-т Науки 40</div>
+                <div class="address__img">Карта</div>
             </div>
         </div>
     </div>
-    <div class="checkoutOrder">
-        <div class="checkoutOrder__inner">
-
-            <form class="formOrder checkoutOrder__formOrder">
-            <!--Поле-->
-                <span class="input checkoutOrder__input">
-                    <label class="input__label">Ваше имя</label>
-                    <span class="input__box">
-                        <input class="input__control callback__control" placeholder="Ф.И.О">
-                    </span>
-                </span>
-            <!--Поле конец-->
-
-
-
-            <!--Поле-->
-                <span class="input checkoutOrder__input">
-                    <label class="input__label">Ваш номер телефона</label>
-                    <span class="input__box">
-                        <input class="input__control callback__control" placeholder="+380">
-                    </span>
-                </span>
-            <!--Поле конец-->
-
-
-            <!--Поле-->
-                <span class="input checkoutOrder__input">
-                    <label class="input__label">Ваш E-mail</label>
-                    <span class="input__box">
-                        <input class="input__control callback__control" placeholder="E-mail">
-                    </span>
-                </span>
-            <!--Поле конец-->
-
-
-            <!--Полная цена-->
-            <span class="price checkoutOrder__fullPrice">
-                ИТОГО: 2345 грн.
-            </span>
-            <!--Полная цена конец-->
-
-
-            <!--Кнопка-->
-                <button class="button checkoutOrder__button" role="button" type="submit">
-                    <span class="button__text">
-                                   Оформить заказ
-                    </span>
-                </button>
-            <!--Кнопка КОНЕЦ-->
-
-            </form>
-
-        </div>
-    </div>
-
+<!--Контейнер для комментов КОНЕЦ-->
 </main>
+<!--Комментарии КОНЕЦ-->
 
-<!--Оформление заказа КОНЕЦ-->
+
 <div class="line line--bgGray">
     <footer class="footer layout__footer">
         <div class="footer__inner layout__row">
@@ -284,9 +269,17 @@
             <div class="footer__item layout__cell">
                 <img src="/img/logo__footer.png" alt="" class="footer__logo">
                 <div class="phone footer__phone">
-                    <span class="phone__line phone__line--footer">+3 8 (097) 285-81-14</span>
-                    <span class="phone__line phone__line--footer">+3 8 (099) 483-11-23</span>
-                    <div class="mail footer__mail"><a href="mailto:clients@site.com.ua" class="mail__line">clients@site.com.ua</a></div>
+                    <span class="phone__line phone__line--footer">
+                        <span class="phone__number">+3 8 (097) 285-81-14</span>
+
+                    </span>
+                    <span class="phone__line phone__line--footer">
+                        <span class="phone__number">+3 8 (099) 483-11-23</span>
+                    </span>
+                    <div class="mail footer__mail">
+                        <div class="mail__line"></div>
+                        <a href="mailto:clients@site.com.ua" class="mail__link mail__link--white">clients@site.com.ua</a>
+                    </div>
                 </div>
             </div>
 

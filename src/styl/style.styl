@@ -161,6 +161,7 @@
         md order 2
         align-self center
         md text-align center
+        md margin-top 30px
     &__phone
         col()
         size(3)
@@ -168,6 +169,8 @@
         md order 3
         align-self center
         text-align center
+        md margin-top 30px
+
     &__miniCart
         col()
         size(3)
@@ -249,7 +252,6 @@
         margin auto
         max-width 100%
 .address
-    md margin-top 30px
     &__line
         position relative
         padding-left 30px
@@ -265,11 +267,9 @@
             left 0
 
 .phone
-    md margin-top 30px
     &__line
         display block
         sm font-size 13px
-        md display inline-block
         &--footer
             text-decoration underline
 
@@ -459,11 +459,18 @@
         text-align right
         width 50%
 
+    &__value
+        font-style italic
+
 
 .mail
-    &__line
+    &__link
         font-size 16px
-        color #fff
+        text-decoration none
+        color $grayDark
+        &--white
+            color white
+
 
 
 
@@ -1062,3 +1069,38 @@
     &__submit
         font-size 16px
         padding 15px 35px
+
+
+
+
+
+.contacts
+    &__inner
+        background pink
+    &__box
+        col()
+
+        padding-bottom 20px
+
+.contact
+    &__phone
+        size(6)
+        size-sm(12)
+    &__mail
+        size(6)
+        size-sm(12)
+    &__social
+        size(6)
+        size-sm(12)
+    &__schedule
+        size(6)
+        size-sm(12)
+    &__address
+        size(6)
+        size-sm(12)
+    &__title
+        font-size 24px
+
+.social
+    &__line
+        display block
